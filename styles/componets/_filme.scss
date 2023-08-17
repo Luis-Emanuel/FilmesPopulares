@@ -1,0 +1,88 @@
+@import "../abstract/variaveis";
+.filme {
+    max-width: 76.5rem;
+    padding: 1.5rem;
+    background-color: $cor-fundo-filme;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $sombra-filme;
+    gap: 4rem 4.5rem;
+
+    img {
+        border-radius: 50%;
+        box-shadow: $sombra-filme-img;
+    }
+
+    .info {
+        
+        
+        h2 {
+            width: 16.75rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        div {
+            p {
+                font-weight: 400;
+                color: $cor-texto-1;
+                margin-right: 2.813rem;
+
+
+            }
+
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 17px;
+                background-size: contain;
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                margin-right: 0.3rem;
+            }
+
+            .nota {
+                background-image: url(../../imagens/Star.svg);
+            }
+
+            .favorito {
+                background-image: url(../../imagens/Heart.svg);
+            }
+        }
+    }
+
+    p {
+        text-align: justify;
+        color: $cor-texto-descricao;
+        font-weight: 500;
+        display: inline-block;
+        max-width: 37rem;
+        line-height: 31.86px;
+    }
+}
+
+@media (max-width: 960px){
+    
+    .filme{
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                text-align: center;
+            }
+            div{
+                display: flex;
+                gap: 2.813rem;
+                justify-content: center;
+                p{
+                    margin: 0;
+                }
+            }
+        }
+    }
+   
+}

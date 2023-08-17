@@ -1,0 +1,8 @@
+@import "./variaveis";
+body{
+    background-color: $cor-fundo;
+    color: $cor-texto-1;
+    font-family: $fonte;
+    padding: 3.875rem;
+}
+

@@ -1,0 +1,50 @@
+@import '../abstract/variaveis';
+
+.filtro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.688rem;
+    margin: 1.875rem 0 3.875rem 0;
+    
+    // Escode o checkbox padrão
+    input{
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+
+    //Criar o checkbox customizado 
+    span{
+        display: block;
+        width: 0.65rem;
+        height: 0.75rem;
+        border: 2px solid $cor-borda;
+        border-radius: 2px;
+    }
+    
+    //Quando o checkbox é clicado, adicionar um fundo cinza    
+    input:checked ~ span{
+        background-color: $cor-borda;
+    }
+
+    //Criar o ícone de check, escondido quando não estiver selecionado
+    span:after {
+        content: "";
+        margin-left:0.1rem ;
+        display: none;
+        width: 0.285rem;
+        height: 0.463rem;
+        border: solid;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    //Exibir o ícone quando selecionado
+    input:checked ~ span:after {
+        display: block;
+    }
+    
+}
